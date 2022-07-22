@@ -1,0 +1,26 @@
+{
+  "name": "myria-ts-samples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "generate-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/common/stark-key.ts",
+    "register-user": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/users/register-user.ts",
+    "get-user-by-address": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/users/user-by-address.ts",
+    "create-project": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/create-project.ts",
+    "project-list": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-list.ts",
+    "project-detail": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-detail.ts"
+  },
+  "devDependencies": {
+    "@starkware-industries/starkware-crypto-utils": "^0.0.2",
+    "@types/node": "^18.0.6",
+    "command-line-args": "^5.2.1",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.9",
+    "myria-core-sdk": "^0.0.100",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  }
+}
