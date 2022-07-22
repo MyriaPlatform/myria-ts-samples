@@ -8,12 +8,13 @@ export async function getUserByAddress() {
 
   let userResponse;
   try {
+    console.log("Retrieving the user...");
     userResponse = await userModule.getUserByWalletAddress(ownerPublicKey);
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Retrieving the user...");
+  console.log("Requested user result:");
   console.log(JSON.stringify(userResponse, null, 2));
   return userResponse;
 }
