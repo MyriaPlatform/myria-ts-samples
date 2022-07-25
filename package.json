@@ -9,7 +9,8 @@
     "register-user": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/users/register-user.ts",
     "get-user-by-address": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/users/user-by-address.ts",
     "create-project": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/create-project.ts",
-    "get-project-list": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-list.ts"
+    "get-project-list": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-list.ts",
+    "get-project-detail": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-detail.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
