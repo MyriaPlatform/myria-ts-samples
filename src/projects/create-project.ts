@@ -4,6 +4,7 @@ import config from "../config";
 
 (async (): Promise<void> => {
   const projectModule: Modules.ProjectModule = new Modules.ProjectModule();
+  const starkKey: string = config.user_stark_key;
 
   let newProjectResponse: ProjectResponse | undefined;
   try {
@@ -12,7 +13,7 @@ import config from "../config";
       name: "PROJECT_NAME",
       companyName: "COMPANY_NAME",
       contactEmail: "COMPANY_EMAIL",
-      starkKey: config.user_stark_key,
+      starkKey: starkKey,
     });
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
