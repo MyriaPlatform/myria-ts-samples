@@ -10,7 +10,11 @@
     "get-user-by-address": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/users/user-by-address.ts",
     "create-project": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/create-project.ts",
     "get-project-list": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-list.ts",
-    "get-project-detail": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-detail.ts"
+    "get-project-detail": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/project-detail.ts",
+    "create-collection": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/collections/create-collection.ts",
+    "get-collection-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/collections/collection-by-id.ts",
+    "get-collection-by-public-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/collections/collection-by-public-id.ts",
+    "get-collection-list": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/collections/collection-list.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
