@@ -1,7 +1,7 @@
 import { Modules } from "myria-core-sdk";
 import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
 
-export async function getProjectList() {
+(async (): Promise<void> => {
   const projectModule: Modules.ProjectModule = new Modules.ProjectModule();
 
   let projectListResult: ProjectResponse | undefined;
@@ -13,7 +13,4 @@ export async function getProjectList() {
   }
   console.log("Project list result:");
   console.log(JSON.stringify(projectListResult, null, 2));
-  return projectListResult;
-}
-
-getProjectList();
+})();

@@ -3,7 +3,7 @@ import config from "../config";
 const starkwareLib = require("@starkware-industries/starkware-crypto-utils");
 const keyDerivation = starkwareLib.keyDerivation;
 
-export async function generateStarkKey() {
+(async (): Promise<void> => {
   const privateKey = config.owner_private_key;
   let signer = new ethers.Wallet(privateKey);
 
@@ -15,6 +15,4 @@ export async function generateStarkKey() {
   const starkKey = keyDerivation.privateToStarkKey(privateKeyFromSignature);
 
   console.log("starkKey:", starkKey);
-}
-
-generateStarkKey();
+})();

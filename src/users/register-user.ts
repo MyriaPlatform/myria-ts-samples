@@ -1,7 +1,7 @@
 import { Modules } from "myria-core-sdk";
 import config from "../config";
 
-export async function appRegisterUser() {
+(async (): Promise<void> => {
   const userModule: Modules.UserModule = new Modules.UserModule();
 
   let userResponse;
@@ -17,7 +17,4 @@ export async function appRegisterUser() {
 
   console.log("Registered user result:");
   console.log(JSON.stringify(userResponse, null, 2));
-  return userResponse;
-}
-
-appRegisterUser();
+})();

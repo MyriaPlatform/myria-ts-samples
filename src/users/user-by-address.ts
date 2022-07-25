@@ -3,7 +3,7 @@ import config from "../config";
 
 const ownerPublicKey: string = config.owner_public_key;
 
-export async function getUserByAddress() {
+(async (): Promise<void> => {
   const userModule: Modules.UserModule = new Modules.UserModule();
 
   let userResponse;
@@ -16,7 +16,4 @@ export async function getUserByAddress() {
 
   console.log("Requested user result:");
   console.log(JSON.stringify(userResponse, null, 2));
-  return userResponse;
-}
-
-getUserByAddress();
+})();
