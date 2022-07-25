@@ -8,8 +8,8 @@ import config from "../config";
   try {
     console.log("Registering the user...");
     userResponse = await userModule.registerUser(
-      config.stark_key,
-      config.owner_public_key
+      config.user_stark_key,
+      config.user_public_key
     );
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));

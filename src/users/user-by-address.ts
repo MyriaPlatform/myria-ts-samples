@@ -1,7 +1,7 @@
 import { Modules } from "myria-core-sdk";
 import config from "../config";
 
-const ownerPublicKey: string = config.owner_public_key;
+const ownerPublicKey: string = config.user_public_key;
 
 (async (): Promise<void> => {
   const userModule: Modules.UserModule = new Modules.UserModule();

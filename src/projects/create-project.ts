@@ -16,7 +16,7 @@ const contactEmail: string = "secret@google.com";
       name: name,
       companyName: companyName,
       contactEmail: contactEmail,
-      starkKey: config.stark_key
+      starkKey: config.user_stark_key
     });
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
