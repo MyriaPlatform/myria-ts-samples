@@ -22,6 +22,6 @@ const contactEmail: string = "secret@google.com";
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Created the project:");
+  console.log("Created project response:");
   console.log(JSON.stringify(newProjectResponse, null, 2));
 })();

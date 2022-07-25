@@ -7,12 +7,15 @@ const keyDerivation = starkwareLib.keyDerivation;
   const privateKey = config.user_private_key;
   let signer = new ethers.Wallet(privateKey);
 
+  console.log("Signing a message...");
+  // don't change the value of signMessage!
   let signature = await signer.signMessage("Message request signature: ");
-  console.log("signature:", signature);
+  console.log("Message signature result:", signature);
 
+  console.log("Generating a Stark Key...");
   const privateKeyFromSignature =
     keyDerivation.getPrivateKeyFromEthSignature(signature);
   const starkKey = keyDerivation.privateToStarkKey(privateKeyFromSignature);
 
-  console.log("starkKey:", starkKey);
+  console.log("Generated Stark Key result:", starkKey);
 })();
