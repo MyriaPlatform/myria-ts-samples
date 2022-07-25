@@ -4,10 +4,9 @@ import {
   GetMintedTransactionResponse,
 } from "myria-core-sdk/dist/cjs/src/types/MintedTransactionTypes";
 
-const id: number = 203;
-
 (async (): Promise<void> => {
   const mintedModule = new Modules.MintedModule();
+  const id: number = 203;
 
   const params: GetMintedTransactionParams = {
     transactionId: id,

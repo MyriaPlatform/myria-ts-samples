@@ -3,8 +3,7 @@ import { Modules } from "myria-core-sdk";
 (async (): Promise<void> => {
   const collectionModule: Modules.CollectionModule =
     new Modules.CollectionModule();
-
-  const publicId = "24dd6da6-e129-4e4f-ab01-a4408649f3bd";
+  const publicId: string = "24dd6da6-e129-4e4f-ab01-a4408649f3bd";
 
   let collectionResponse;
   try {

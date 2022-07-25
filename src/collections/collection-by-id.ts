@@ -3,7 +3,6 @@ import { Modules } from "myria-core-sdk";
 (async (): Promise<void> => {
   const collectionModule: Modules.CollectionModule =
     new Modules.CollectionModule();
-
   const id: number = 5;
 
   let collectionResponse;

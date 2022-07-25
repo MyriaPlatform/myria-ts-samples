@@ -1,10 +1,9 @@
 import { Modules } from "myria-core-sdk";
 import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
 
-const id: string = "5";
-
 (async (): Promise<void> => {
   const projectModule: Modules.ProjectModule = new Modules.ProjectModule();
+  const id: string = "5";
 
   let projectDetailResponse: ProjectResponse | undefined;
   try {

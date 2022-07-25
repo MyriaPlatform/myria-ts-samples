@@ -2,10 +2,6 @@ import { Modules } from "myria-core-sdk";
 import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
 import config from "../config";
 
-const name: string = "Secret Game";
-const companyName: string = "Secret Studio";
-const contactEmail: string = "secret@google.com";
-
 (async (): Promise<void> => {
   const projectModule: Modules.ProjectModule = new Modules.ProjectModule();
 
@@ -13,10 +9,10 @@ const contactEmail: string = "secret@google.com";
   try {
     console.log("Creating the project...");
     newProjectResponse = await projectModule.createProject({
-      name: name,
-      companyName: companyName,
-      contactEmail: contactEmail,
-      starkKey: config.user_stark_key
+      name: "PROJECT_NAME",
+      companyName: "COMPANY_NAME",
+      contactEmail: "COMPANY_EMAIL",
+      starkKey: config.user_stark_key,
     });
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));

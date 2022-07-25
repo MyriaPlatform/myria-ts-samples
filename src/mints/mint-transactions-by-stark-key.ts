@@ -5,10 +5,9 @@ import {
 } from "myria-core-sdk/dist/cjs/src/types/MintedTransactionTypes";
 import config from "../config";
 
-const starkKey: string = config.user_stark_key;
-
 (async (): Promise<void> => {
   const mintedModule = new Modules.MintedModule();
+  const starkKey: string = config.user_stark_key;
 
   const params: GetMintedStarkKeyParams = {
     starkKey: starkKey,

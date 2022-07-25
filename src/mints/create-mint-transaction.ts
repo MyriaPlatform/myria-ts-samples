@@ -3,25 +3,24 @@ import { MintedTransactionERC721Request } from "myria-core-sdk/dist/cjs/src/type
 import { MintedTransactionERC721Response } from "myria-core-sdk/dist/types/src/types/MintedTransactionTypes";
 import config from "../config";
 
-const starkKey: string = config.user_stark_key;
-const contractAddress: string = config.collection_contract_address;
-const tokenUri: string = config.token_uri;
-const royaltyRecipient: string = config.user_public_key;
-const tokenId: string = "1";
-const description: string = "MT NFT 05";
-
 (async (): Promise<void> => {
   const mintedModule = new Modules.MintedModule();
+
+  const starkKey: string = config.user_stark_key;
+  const contractAddress: string = config.collection_contract_address;
+  const tokenUri: string = config.token_uri;
+  const tokenId: string = config.token_id;
+  const royaltyRecipient: string = config.user_public_key;
 
   const params: MintedTransactionERC721Request = {
     starkKey: starkKey,
     contractAddress: contractAddress,
     uri: tokenUri,
     tokenId: tokenId,
-    description: description,
+    description: "MINTED_ASSET_DESCRIPTION",
     royalties: [
       {
-        percentage: 10,
+        percentage: 2,
         receiptAddress: royaltyRecipient,
       },
     ],
