@@ -9,10 +9,10 @@ const contactEmail: string = "secret@google.com";
 (async (): Promise<void> => {
   const projectModule: Modules.ProjectModule = new Modules.ProjectModule();
 
-  let newProjectResult: ProjectResponse | undefined;
+  let newProjectResponse: ProjectResponse | undefined;
   try {
     console.log("Creating the project...");
-    newProjectResult = await projectModule.createProject({
+    newProjectResponse = await projectModule.createProject({
       name: name,
       companyName: companyName,
       contactEmail: contactEmail,
@@ -23,5 +23,5 @@ const contactEmail: string = "secret@google.com";
   }
 
   console.log("Created the project:");
-  console.log(JSON.stringify(newProjectResult, null, 2));
+  console.log(JSON.stringify(newProjectResponse, null, 2));
 })();

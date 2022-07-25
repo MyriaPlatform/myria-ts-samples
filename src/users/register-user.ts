@@ -15,6 +15,6 @@ import config from "../config";
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Registered user result:");
+  console.log("Registered user response:");
   console.log(JSON.stringify(userResponse, null, 2));
 })();

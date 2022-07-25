@@ -14,6 +14,6 @@ const ownerPublicKey: string = config.owner_public_key;
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Requested user result:");
+  console.log("Requested user response:");
   console.log(JSON.stringify(userResponse, null, 2));
 })();
