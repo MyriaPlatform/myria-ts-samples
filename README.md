@@ -56,7 +56,7 @@ npm run generate-stark-key
 
 #### 2.1 Register a user
 
-Registers a user on the Myria network.
+Registers a user on Myria.
 
 Requirements:
 - Provide `PUBLIC_KEY` and `STARK_KEY` environment variables
@@ -127,9 +127,6 @@ npm run create-collection
 
 Returns a list of collections created on Myria.
 
-Requirements:
-- Replace the following parameter to request the needed collection: `collectionId`
-
 ```bash
 npm run get-collection-list
 ```
@@ -160,7 +157,7 @@ npm run get-collection-by-public-id
 
 #### 5.1 Create a mint transaction
 
-Returns details of a given Myria collection by its public id.
+Create a mint transaction of a given asset on Myria.
 
 Requirements:
 - Provide `STARK_KEY`, `CONTRACT_ADDRESS`, `TOKEN_URI`, `TOKEN_ID`  environment variables
