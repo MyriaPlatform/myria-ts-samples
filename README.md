@@ -59,7 +59,7 @@ npm run generate-stark-key
 Registers a user on the Myria network.
 
 Requirements:
-- Provided `PUBLIC_KEY` and `STARK_KEY` environment variables
+- Provide `PUBLIC_KEY` and `STARK_KEY` environment variables
 
 ```bash
 npm run register-user
@@ -70,7 +70,7 @@ npm run register-user
 Returns user details by a given public key address.
 
 Requirements:
-- Provided `PUBLIC_KEY` environment variable
+- Provide `PUBLIC_KEY` environment variable
 
 ```bash
 npm run get-user-by-address
@@ -83,7 +83,7 @@ npm run get-user-by-address
 Creates a project on Myria.
 
 Requirements:
-- Provided `CONTRACT_ADDRESS`  environment variable
+- Provide `CONTRACT_ADDRESS` environment variable
 - Replace the following parameters to match your project details: `name`, `companyName`, `contactEmail`
 
 ```bash
@@ -116,7 +116,7 @@ npm run get-project-details
 Creates a collection on Myria.
 
 Requirements:
-- Provided `CONTRACT_ADDRESS`, `METADATA_API_URL`, `PUBLIC_KEY`, `PROJECT_ID`, `STARK_KEY`  environment variables
+- Provide `CONTRACT_ADDRESS`, `METADATA_API_URL`, `PUBLIC_KEY`, `PROJECT_ID`, `STARK_KEY`  environment variables
 - Replace the following parameters to match your collection details: `name`, `description`
 
 ```bash
@@ -163,7 +163,7 @@ npm run get-collection-by-public-id
 Returns details of a given Myria collection by its public id.
 
 Requirements:
-- Provided `STARK_KEY`, `CONTRACT_ADDRESS`, `TOKEN_URI`, `TOKEN_ID`  environment variables
+- Provide `STARK_KEY`, `CONTRACT_ADDRESS`, `TOKEN_URI`, `TOKEN_ID`  environment variables
 - Replace the following parameters to match your mint transaction details: `description`, `royalties`
 
 ```bash
@@ -175,7 +175,7 @@ npm run create-mint-transaction
 Returns details of a given mint transaction by its id.
 
 Requirements:
-- Provided `STARK_KEY`, `CONTRACT_ADDRESS`, `TOKEN_URI`, `TOKEN_ID`  environment variables
+- Provide `STARK_KEY`, `CONTRACT_ADDRESS`, `TOKEN_URI`, `TOKEN_ID`  environment variables
 - Replace the following parameter to request the needed mint transaction: `transactionId`
 
 ```bash
@@ -187,7 +187,7 @@ npm run get-mint-transaction-details
 Returns a list of mint transactions by a given Stark Key.
 
 Requirements:
-- Provided `STARK_KEY` environment variable
+- Provide `STARK_KEY` environment variable
 
 ```bash
 npm run get-mint-transactions-by-stark-key
