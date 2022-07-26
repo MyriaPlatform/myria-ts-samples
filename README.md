@@ -46,7 +46,7 @@ TOKEN_ID=           <unique identifier of a given asset, should be an incrementa
 Generates a Stark Key derived from a given Web3 private key.
 
 Requirements: 
-- Provided `PRIVATE_KEY` environment variable
+- Provide `PRIVATE_KEY` environment variable
 
 ```bash
 npm run generate-stark-key
