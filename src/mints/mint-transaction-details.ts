@@ -6,15 +6,15 @@ import {
 
 (async (): Promise<void> => {
   const mintedModule = new Modules.MintedModule();
-  const id: number = 203;
+  const transactionId: number = 203;
 
   const params: GetMintedTransactionParams = {
-    transactionId: id,
+    transactionId: transactionId,
   };
 
   let mintTransactionResponse: GetMintedTransactionResponse | undefined;
   try {
-    console.log(`Retrieving details of the ${id} mint transaction...`);
+    console.log(`Retrieving details of the ${transactionId} mint transaction...`);
     mintTransactionResponse = await mintedModule.getMintTransactionList(params);
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));

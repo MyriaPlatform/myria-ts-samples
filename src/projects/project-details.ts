@@ -3,12 +3,12 @@ import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectType
 
 (async (): Promise<void> => {
   const projectModule: Modules.ProjectModule = new Modules.ProjectModule();
-  const id: string = "5";
+  const projectId: string = "5";
 
   let projectDetailResponse: ProjectResponse | undefined;
   try {
-    console.log(`Retrieving details of the ${id} project...`);
-    projectDetailResponse = await projectModule.getProjectDetail(id);
+    console.log(`Retrieving details of the ${projectId} project...`);
+    projectDetailResponse = await projectModule.getProjectDetail(projectId);
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }
