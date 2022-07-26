@@ -41,9 +41,9 @@ TOKEN_ID=           <unique identifier of a given asset, should be an incrementa
 
 ### 1. Common
 
-#### 1.1 Generate a stark key
+#### 1.1 Generate a Stark Key
 
-Generates a stark key derived from a given Web3 private key.
+Generates a Stark Key derived from a given Web3 private key.
 
 Requirements: 
 - Provided `PRIVATE_KEY` environment variable
