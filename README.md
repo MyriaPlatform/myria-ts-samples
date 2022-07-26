@@ -182,7 +182,7 @@ Requirements:
 npm run get-mint-transaction-details
 ```
 
-#### 5.3 Get mint transactions by Strak Key
+#### 5.3 Get mint transactions by Stark Key
 
 Returns a list of mint transactions by a given Stark Key.
 
