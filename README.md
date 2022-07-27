@@ -155,16 +155,16 @@ npm run get-collection-by-public-id
 
 ### 5. Mint transactions
 
-#### 5.1 Create a mint transaction
+#### 5.1 Create ERC721 mint transaction
 
-Create a mint transaction of a given asset on Myria.
+Create ERC721 mint transaction of a given asset on Myria.
 
 Requirements:
 - Provide `STARK_KEY`, `CONTRACT_ADDRESS`, `TOKEN_URI`, `TOKEN_ID`  environment variables
 - Replace the following parameters to match your mint transaction details: `description`, `royalties`
 
 ```bash
-npm run create-mint-transaction
+npm run create-erc721-mint-transaction
 ```
 
 #### 5.2 Get mint transaction details
