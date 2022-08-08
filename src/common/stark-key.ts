@@ -17,5 +17,5 @@ const keyDerivation = starkwareLib.keyDerivation;
     keyDerivation.getPrivateKeyFromEthSignature(signature);
   const starkKey = keyDerivation.privateToStarkKey(privateKeyFromSignature);
 
-  console.log("Generated Stark Key result:", starkKey);
+  console.log("Generated Stark Key result:", "0x" + starkKey);
 })();
