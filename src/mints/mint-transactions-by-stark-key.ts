@@ -1,24 +1,27 @@
 import { Modules } from "myria-core-sdk";
 import {
-  GetMintedStarkKeyParams,
-  GetMintedStarkKeyResponse,
-} from "myria-core-sdk/dist/cjs/src/types/MintedTransactionTypes";
+  GetMintedAssetsParams,
+  GetMintedAssetsResponse,
+} from "myria-core-sdk/dist/cjs/src/types/MintTypes";
+import { MintingManager } from "myria-core-sdk/dist/types/src/modules";
 import config from "../config";
 
 (async (): Promise<void> => {
-  const mintedModule = new Modules.MintedModule();
+  const mintingManager: MintingManager = new MintingManager();
   const starkKey: string = config.user_stark_key;
 
-  const params: GetMintedStarkKeyParams = {
+  const params: GetMintedAssetsParams = {
     starkKey: starkKey,
   };
 
-  let mintTransactionResponse: GetMintedStarkKeyResponse | undefined;
+  let mintTransactionResponse: GetMintedAssetsResponse | undefined;
   try {
     console.log(
       `Retrieving a list of mint transactions with ${starkKey} stark key...`
     );
-    mintTransactionResponse = await mintedModule.getMintStarkKey(params);
+    mintTransactionResponse = await mintingManager.getMintedAssetByStarkKey(
+      params
+    );
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }

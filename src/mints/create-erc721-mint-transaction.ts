@@ -1,10 +1,9 @@
-import { Modules } from "myria-core-sdk";
-import { MintedTransactionERC721Request } from "myria-core-sdk/dist/cjs/src/types/MintedTransactionTypes";
-import { MintedTransactionERC721Response } from "myria-core-sdk/dist/types/src/types/MintedTransactionTypes";
+import { MintingManager } from "myria-core-sdk/dist/types/src/modules";
+import { MintERC20Response, MintERC721Params } from "myria-core-sdk/dist/types/src/types/MintTypes";
 import config from "../config";
 
 (async (): Promise<void> => {
-  const mintedModule = new Modules.MintedModule();
+  const mintingManager: MintingManager = new MintingManager();
 
   const starkKey: string = config.user_stark_key;
   const contractAddress: string = config.collection_contract_address;
@@ -12,7 +11,7 @@ import config from "../config";
   const tokenId: string = config.token_id;
   const royaltyRecipient: string = config.user_public_key;
 
-  const params: MintedTransactionERC721Request = {
+  const params: MintERC721Params = {
     starkKey: starkKey,
     contractAddress: contractAddress,
     uri: tokenUri,
@@ -26,10 +25,10 @@ import config from "../config";
     ],
   };
 
-  let mintTransactionResponse: MintedTransactionERC721Response | undefined;
+  let mintTransactionResponse: MintERC20Response | undefined;
   try {
     console.log("Initiating a mint transaction...");
-    mintTransactionResponse = await mintedModule.createMintTransactionERC721(
+    mintTransactionResponse = await mintingManager.createMintTransactionERC721(
       params
     );
   } catch (error) {

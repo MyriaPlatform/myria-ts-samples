@@ -1,15 +1,15 @@
-import { Modules } from "myria-core-sdk";
+import { ProjectManager } from "myria-core-sdk/dist/types/src/modules";
 import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
 import config from "../config";
 
 (async (): Promise<void> => {
-  const projectModule: Modules.ProjectModule = new Modules.ProjectModule();
+  const projectManager: ProjectManager = new ProjectManager();
   const starkKey: string = config.user_stark_key;
 
   let newProjectResponse: ProjectResponse | undefined;
   try {
     console.log("Creating the project...");
-    newProjectResponse = await projectModule.createProject({
+    newProjectResponse = await projectManager.createProject({
       name: "PROJECT_NAME",
       companyName: "COMPANY_NAME",
       contactEmail: "COMPANY_EMAIL",

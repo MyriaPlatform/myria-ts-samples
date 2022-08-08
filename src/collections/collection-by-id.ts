@@ -1,14 +1,15 @@
-import { Modules } from "myria-core-sdk";
+import { CollectionManager } from "myria-core-sdk/dist/types/src/modules";
 
 (async (): Promise<void> => {
-  const collectionModule: Modules.CollectionModule =
-    new Modules.CollectionModule();
+  const collectionManager: CollectionManager = new CollectionManager();
   const collectionId: number = 5;
 
   let collectionResponse;
   try {
     console.log(`Retrieving collection #${collectionId}...`);
-    collectionResponse = await collectionModule.getCollectionById(collectionId);
+    collectionResponse = await collectionManager.getCollectionById(
+      collectionId
+    );
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }

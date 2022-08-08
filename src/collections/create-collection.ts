@@ -1,13 +1,12 @@
-import { Modules } from "myria-core-sdk";
+import { CollectionManager } from "myria-core-sdk/dist/types/src/modules";
 import {
-  CreateCollection,
+  CreateCollectionParams,
   CreateCollectionResponse,
 } from "myria-core-sdk/dist/types/src/types/CollectionTypes";
 import config from "../config";
 
 (async (): Promise<void> => {
-  const collectionModule: Modules.CollectionModule =
-    new Modules.CollectionModule();
+  const collectionManager: CollectionManager = new CollectionManager();
 
   const contractAddress: string = config.collection_contract_address;
   const metadataApiUrl: string = config.metadata_api_url;
@@ -15,7 +14,7 @@ import config from "../config";
   const projectId: number = config.project_id;
   const starkKey: string = config.user_stark_key;
 
-  const params: CreateCollection = {
+  const params: CreateCollectionParams = {
     name: "COLLECTION_NAME",
     description: "COLLECTION_DESCRIPTION",
     contractAddress: contractAddress,
@@ -28,7 +27,7 @@ import config from "../config";
   let collectionResponse: CreateCollectionResponse | undefined;
   try {
     console.log("Creating the collection...");
-    collectionResponse = await collectionModule.createCollection(params);
+    collectionResponse = await collectionManager.createCollection(params);
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }

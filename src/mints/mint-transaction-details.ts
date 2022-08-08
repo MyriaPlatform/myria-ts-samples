@@ -1,11 +1,11 @@
-import { Modules } from "myria-core-sdk";
+import { MintingManager } from "myria-core-sdk/dist/types/src/modules";
 import {
   GetMintedTransactionParams,
   GetMintedTransactionResponse,
-} from "myria-core-sdk/dist/cjs/src/types/MintedTransactionTypes";
+} from "myria-core-sdk/dist/types/src/types/MintTypes";
 
 (async (): Promise<void> => {
-  const mintedModule = new Modules.MintedModule();
+  const mintingManager: MintingManager = new MintingManager();
   const transactionId: number = 203;
 
   const params: GetMintedTransactionParams = {
@@ -14,8 +14,12 @@ import {
 
   let mintTransactionResponse: GetMintedTransactionResponse | undefined;
   try {
-    console.log(`Retrieving details of the ${transactionId} mint transaction...`);
-    mintTransactionResponse = await mintedModule.getMintTransactionList(params);
+    console.log(
+      `Retrieving details of the ${transactionId} mint transaction...`
+    );
+    mintTransactionResponse = await mintingManager.getMintTransactionList(
+      params
+    );
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }
