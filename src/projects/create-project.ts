@@ -1,4 +1,4 @@
-import { ProjectManager } from "myria-core-sdk/dist/types/src/modules";
+import { ProjectManager } from "myria-core-sdk/dist/cjs/src/modules";
 import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
 import config from "../config";
 

@@ -1,4 +1,4 @@
-import { MintingManager } from "myria-core-sdk/dist/types/src/modules";
+import { MintingManager } from "myria-core-sdk/dist/cjs/src/modules";
 import { MintERC20Response, MintERC721Params } from "myria-core-sdk/dist/types/src/types/MintTypes";
 import config from "../config";
 

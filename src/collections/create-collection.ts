@@ -1,4 +1,4 @@
-import { CollectionManager } from "myria-core-sdk/dist/types/src/modules";
+import { CollectionManager } from "myria-core-sdk/dist/cjs/src/modules/CollectionManager";
 import {
   CreateCollectionParams,
   CreateCollectionResponse,

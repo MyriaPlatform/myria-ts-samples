@@ -1,5 +1,4 @@
-import { Modules } from "myria-core-sdk";
-import { UserManager } from "myria-core-sdk/dist/types/src/modules";
+import { UserManager } from "myria-core-sdk/dist/cjs/src/modules";
 import { getMyriaClient } from "../common/myria-client";
 import config from "../config";
 
