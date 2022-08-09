@@ -109,6 +109,18 @@ Requirements:
 npm run get-project-details
 ```
 
+#### 3.4 Update a project
+
+Update project by its id.
+
+Requirements:
+- Provide `PROJECT_ID` environment variable
+- Replace the following parameters to update the needed project: `name`, `companyName`, `contactEmail`
+
+```bash
+npm run update-project
+```
+
 ### 4. Collections
 
 #### 4.1 Create a collection
