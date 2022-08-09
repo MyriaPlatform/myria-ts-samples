@@ -8,14 +8,15 @@ import config from "../config";
   const starkKey: string = config.user_stark_key;
 
   let newProjectResponse: ProjectResponse | undefined;
+  const params: CreateProjectParams = {
+    name: "PROJECT_NAME",
+    companyName: "COMPANY_NAME",
+    contactEmail: "COMPANY_EMAIL",
+    starkKey: starkKey,
+  };
+  
   try {
     console.log("Creating the project...");
-    const params: CreateProjectParams = {
-      name: "PROJECT_NAME",
-      companyName: "COMPANY_NAME",
-      contactEmail: "COMPANY_EMAIL",
-      starkKey: starkKey,
-    };
     newProjectResponse = await projectManager.createProject(params);
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
