@@ -1,5 +1,5 @@
 import { MintingManager } from "myria-core-sdk/dist/cjs/src/modules";
-import { MintERC20Response, MintERC721Params } from "myria-core-sdk/dist/types/src/types/MintTypes";
+import { MintERC721Params, MintERC721Response } from "myria-core-sdk/dist/types/src/types/MintTypes";
 import config from "../config";
 
 (async (): Promise<void> => {
@@ -25,7 +25,7 @@ import config from "../config";
     ],
   };
 
-  let mintTransactionResponse: MintERC20Response | undefined;
+  let mintTransactionResponse: MintERC721Response | undefined;
   try {
     console.log("Initiating a mint transaction...");
     mintTransactionResponse = await mintingManager.createMintTransactionERC721(

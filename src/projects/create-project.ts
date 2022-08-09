@@ -1,4 +1,5 @@
 import { ProjectManager } from "myria-core-sdk/dist/cjs/src/modules";
+import { CreateProjectParams } from "myria-core-sdk/dist/cjs/src/types/ProjectTypes";
 import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
 import config from "../config";
 
@@ -9,12 +10,13 @@ import config from "../config";
   let newProjectResponse: ProjectResponse | undefined;
   try {
     console.log("Creating the project...");
-    newProjectResponse = await projectManager.createProject({
+    const params: CreateProjectParams = {
       name: "PROJECT_NAME",
       companyName: "COMPANY_NAME",
       contactEmail: "COMPANY_EMAIL",
       starkKey: starkKey,
-    });
+    };
+    newProjectResponse = await projectManager.createProject(params);
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }
