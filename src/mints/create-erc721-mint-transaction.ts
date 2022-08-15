@@ -5,11 +5,11 @@ import config from "../config";
 (async (): Promise<void> => {
   const mintingManager: MintingManager = new MintingManager();
 
-  const starkKey: string = config.user_stark_key;
+  const starkKey: string = config.stark_key;
   const contractAddress: string = config.collection_contract_address;
   const tokenUri: string = config.token_uri;
   const tokenId: string = config.token_id;
-  const royaltyRecipient: string = config.user_public_key;
+  const royaltyRecipient: string = config.public_key;
 
   const params: MintERC721Params = {
     starkKey: starkKey,

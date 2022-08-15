@@ -6,8 +6,6 @@
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "generate-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/common/stark-key.ts",
-    "register-user": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/users/register-user.ts",
-    "get-user-by-address": "ts-node -r tsconfig-paths/register ./src/users/user-by-address.ts",
     "create-project": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/create-project.ts",
     "update-project": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/update-project.ts",
     "get-project-list": "ts-node -r tsconfig-paths/register ./src/projects/project-list.ts",

@@ -5,7 +5,7 @@ import config from "../config";
 
 (async (): Promise<void> => {
   const projectManager: ProjectManager = new ProjectManager();
-  const starkKey: string = config.user_stark_key;
+  const starkKey: string = config.stark_key;
 
   let newProjectResponse: ProjectResponse | undefined;
   const params: CreateProjectParams = {

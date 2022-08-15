@@ -7,7 +7,7 @@ import config from "../config";
 
 (async (): Promise<void> => {
   const mintingManager: MintingManager = new MintingManager();
-  const starkKey: string = config.user_stark_key;
+  const starkKey: string = config.stark_key;
 
   const params: GetMintedAssetsParams = {
     starkKey: starkKey,

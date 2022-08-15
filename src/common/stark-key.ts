@@ -4,7 +4,7 @@ const starkwareLib = require("@starkware-industries/starkware-crypto-utils");
 const keyDerivation = starkwareLib.keyDerivation;
 
 (async (): Promise<void> => {
-  const privateKey = config.user_private_key;
+  const privateKey = config.private_key;
   let signer = new ethers.Wallet(privateKey);
 
   console.log("Signing a message...");

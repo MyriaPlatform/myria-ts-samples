@@ -10,9 +10,9 @@ import config from "../config";
 
   const contractAddress: string = config.collection_contract_address;
   const metadataApiUrl: string = config.metadata_api_url;
-  const publicKey: string = config.user_public_key;
+  const publicKey: string = config.public_key;
   const projectId: number = config.project_id;
-  const starkKey: string = config.user_stark_key;
+  const starkKey: string = config.stark_key;
 
   const params: CreateCollectionParams = {
     name: "COLLECTION_NAME",

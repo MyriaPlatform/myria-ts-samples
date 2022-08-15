@@ -52,33 +52,9 @@ Requirements:
 npm run generate-stark-key
 ```
 
-### 2. Users
+### 2. Projects
 
-#### 2.1 Register a user
-
-Registers a user on Myria.
-
-Requirements:
-- Provide `PUBLIC_KEY` and `STARK_KEY` environment variables
-
-```bash
-npm run register-user
-```
-
-#### 2.2 Get user by address
-
-Returns user details by a given public key address.
-
-Requirements:
-- Provide `PUBLIC_KEY` environment variable
-
-```bash
-npm run get-user-by-address
-```
-
-### 3. Projects
-
-#### 3.1 Create a project
+#### 2.1 Create a project
 
 Creates a project on Myria.
 
@@ -90,7 +66,7 @@ Requirements:
 npm run create-project
 ```
 
-#### 3.2 Get project list
+#### 2.2 Get project list
 
 Returns a list of projects created on Myria.
 
@@ -98,7 +74,7 @@ Returns a list of projects created on Myria.
 npm run get-project-list
 ```
 
-#### 3.3 Get project details
+#### 2.3 Get project details
 
 Returns details of a given Myria project by its id.
 
@@ -109,7 +85,7 @@ Requirements:
 npm run get-project-details
 ```
 
-#### 3.4 Update a project
+#### 2.4 Update a project
 
 Update project by its id.
 
@@ -121,9 +97,9 @@ Requirements:
 npm run update-project
 ```
 
-### 4. Collections
+### 3. Collections
 
-#### 4.1 Create a collection
+#### 3.1 Create a collection
 
 Creates a collection on Myria.
 
@@ -135,7 +111,7 @@ Requirements:
 npm run create-collection
 ```
 
-#### 4.2 Get collection list
+#### 3.2 Get collection list
 
 Returns a list of collections created on Myria.
 
@@ -143,7 +119,7 @@ Returns a list of collections created on Myria.
 npm run get-collection-list
 ```
 
-#### 4.3 Get collection by id
+#### 3.3 Get collection by id
 
 Returns details of a given Myria collection by its id.
 
@@ -154,7 +130,7 @@ Requirements:
 npm run get-collection-by-id
 ```
 
-#### 4.4 Get collection by public id
+#### 3.4 Get collection by public id
 
 Returns details of a given Myria collection by its public id.
 
@@ -165,9 +141,9 @@ Requirements:
 npm run get-collection-by-public-id
 ```
 
-### 5. Mint transactions
+### 4. Mint transactions
 
-#### 5.1 Create ERC721 mint transaction
+#### 4.1 Create ERC721 mint transaction
 
 Create ERC721 mint transaction of a given asset on Myria.
 
@@ -179,7 +155,7 @@ Requirements:
 npm run create-erc721-mint-transaction
 ```
 
-#### 5.2 Get mint transaction details
+#### 4.2 Get mint transaction details
 
 Returns details of a given mint transaction by its id.
 
@@ -191,7 +167,7 @@ Requirements:
 npm run get-mint-transaction-details
 ```
 
-#### 5.3 Get mint transactions by Stark Key
+#### 4.3 Get mint transactions by Stark Key
 
 Returns a list of mint transactions by a given Stark Key.
 
