@@ -2,7 +2,7 @@ import { CollectionManager } from "myria-core-sdk/dist/cjs/src/modules/Collectio
 
 (async (): Promise<void> => {
   const collectionManager: CollectionManager = new CollectionManager();
-  const publicId: string = "24dd6da6-e129-4e4f-ab01-a4408649f3bd";
+  const publicId: string = "27fe0077-c54a-4ce9-a87d-fe6ad3e6310d";
 
   let collectionResponse;
   try {

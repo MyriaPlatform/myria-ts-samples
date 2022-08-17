@@ -3,7 +3,7 @@ import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectType
 
 (async (): Promise<void> => {
   const projectManager: ProjectManager = new ProjectManager();
-  const projectId: string = "5";
+  const projectId: string = "233";
 
   let projectDetailResponse: ProjectResponse | undefined;
   try {

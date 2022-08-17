@@ -2,7 +2,7 @@ import { CollectionManager } from "myria-core-sdk/dist/cjs/src/modules/Collectio
 
 (async (): Promise<void> => {
   const collectionManager: CollectionManager = new CollectionManager();
-  const collectionId: number = 5;
+  const collectionId: number = 39;
 
   let collectionResponse;
   try {
