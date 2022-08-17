@@ -1,4 +1,9 @@
-import { MintingManager, MintERC721Params, MintERC721Response, FeeType } from "myria-core-sdk";
+import { 
+  MintingManager, 
+  MintERC721Params, 
+  MintERC721Response, 
+  FeeType 
+} from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {
