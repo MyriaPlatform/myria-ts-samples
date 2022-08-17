@@ -1,4 +1,4 @@
-import { CollectionManager } from "myria-core-sdk/dist/cjs/src/modules/CollectionManager";
+import { CollectionManager } from "myria-core-sdk";
 
 (async (): Promise<void> => {
   const collectionManager: CollectionManager = new CollectionManager();

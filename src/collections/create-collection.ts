@@ -1,8 +1,8 @@
-import { CollectionManager } from "myria-core-sdk/dist/cjs/src/modules/CollectionManager";
 import {
+  CollectionManager,
   CreateCollectionParams,
   CreateCollectionResponse,
-} from "myria-core-sdk/dist/types/src/types/CollectionTypes";
+} from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {

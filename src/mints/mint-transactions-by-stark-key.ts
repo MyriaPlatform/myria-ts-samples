@@ -1,4 +1,8 @@
-import { GetMintedAssetsParams, GetMintedAssetsResponse, MintingManager } from "myria-core-sdk";
+import { 
+  GetMintedAssetsParams, 
+  GetMintedAssetsResponse, 
+  MintingManager 
+} from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {

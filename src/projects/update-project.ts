@@ -1,6 +1,8 @@
-import { ProjectManager } from "myria-core-sdk/dist/cjs/src/modules";
-import { UpdateProjectParams } from "myria-core-sdk/dist/cjs/src/types/ProjectTypes";
-import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
+import { 
+  ProjectManager, 
+  UpdateProjectParams,
+  ProjectResponse 
+} from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {

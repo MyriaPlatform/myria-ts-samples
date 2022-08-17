@@ -1,5 +1,4 @@
-import { ProjectManager } from "myria-core-sdk/dist/cjs/src/modules";
-import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
+import { ProjectManager, ProjectResponse } from "myria-core-sdk";
 
 (async (): Promise<void> => {
   const projectManager: ProjectManager = new ProjectManager();

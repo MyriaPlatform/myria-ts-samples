@@ -1,6 +1,8 @@
-import { ProjectManager } from "myria-core-sdk/dist/cjs/src/modules";
-import { CreateProjectParams } from "myria-core-sdk/dist/cjs/src/types/ProjectTypes";
-import { ProjectResponse } from "myria-core-sdk/dist/types/src/types/ProjectTypes";
+import {
+  ProjectManager,
+  CreateProjectParams,
+  ProjectResponse
+} from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {
@@ -14,7 +16,7 @@ import config from "../config";
     contactEmail: "COMPANY_EMAIL",
     starkKey: starkKey,
   };
-  
+
   try {
     console.log("Creating the project...");
     newProjectResponse = await projectManager.createProject(params);
