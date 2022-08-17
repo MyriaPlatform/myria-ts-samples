@@ -16,14 +16,14 @@
     "get-collection-by-public-id": "ts-node -r tsconfig-paths/register ./src/collections/collection-by-public-id.ts",
     "create-erc721-mint-transaction": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-erc721-mint-transaction.ts",
     "get-mint-transaction-details": "ts-node -r tsconfig-paths/register ./src/mints/mint-transaction-details.ts",
-    "get-mint-transactions-by-stark-key": "ts-node -r tsconfig-paths/register ./src/mints/mint-transactions-by-stark-key.ts"
+    "get-mint-transactions-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/mint-transactions-by-stark-key.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
     "@types/node": "^18.0.6",
     "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
-    "myria-core-sdk": "^0.0.122",
+    "myria-core-sdk": "^0.0.143-staging",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
