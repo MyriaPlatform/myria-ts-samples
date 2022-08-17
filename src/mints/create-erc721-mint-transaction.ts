@@ -1,5 +1,4 @@
-import { MintingManager } from "myria-core-sdk/dist/cjs/src/modules";
-import { MintERC721Params, MintERC721Response } from "myria-core-sdk/dist/types/src/types/MintTypes";
+import { MintingManager, MintERC721Params, MintERC721Response, FeeType } from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {
@@ -16,11 +15,12 @@ import config from "../config";
     contractAddress: contractAddress,
     uri: tokenUri,
     tokenId: tokenId,
-    description: "MINTED_ASSET_DESCRIPTION",
-    royalties: [
+    description: "Asset X",
+    fees: [
       {
         percentage: 2,
         receiptAddress: royaltyRecipient,
+        feeType: FeeType.ROYALTY
       },
     ],
   };

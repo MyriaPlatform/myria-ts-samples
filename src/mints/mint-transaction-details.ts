@@ -1,12 +1,12 @@
-import { MintingManager } from "myria-core-sdk/dist/cjs/src/modules";
 import {
   GetMintedTransactionParams,
   GetMintedTransactionResponse,
-} from "myria-core-sdk/dist/types/src/types/MintTypes";
+  MintingManager
+} from "myria-core-sdk";
 
 (async (): Promise<void> => {
   const mintingManager: MintingManager = new MintingManager();
-  const transactionId: number = 203;
+  const transactionId: number = 39026;
 
   const params: GetMintedTransactionParams = {
     transactionId: transactionId,
