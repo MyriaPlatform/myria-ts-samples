@@ -1,7 +1,9 @@
 import { ProjectManager, ProjectResponse } from "myria-core-sdk";
+import config from "../config";
 
 (async (): Promise<void> => {
-  const projectManager: ProjectManager = new ProjectManager();
+  const env = config.environment;
+  const projectManager: ProjectManager = new ProjectManager(env);
   const projectId: string = "233";
 
   let projectDetailResponse: ProjectResponse | undefined;

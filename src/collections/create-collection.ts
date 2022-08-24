@@ -1,12 +1,13 @@
 import {
   CollectionManager,
   CreateCollectionParams,
-  CreateCollectionResponse,
+  CreateCollectionResponse
 } from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {
-  const collectionManager: CollectionManager = new CollectionManager();
+  const env = config.environment;
+  const collectionManager: CollectionManager = new CollectionManager(env);
 
   const contractAddress: string = config.collection_contract_address;
   const metadataApiUrl: string = config.metadata_api_url;

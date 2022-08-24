@@ -6,7 +6,8 @@ import {
 import config from "../config";
 
 (async (): Promise<void> => {
-  const projectManager: ProjectManager = new ProjectManager();
+  const env = config.environment;
+  const projectManager: ProjectManager = new ProjectManager(env);
   const starkKey: string = config.stark_key;
 
   let newProjectResponse: ProjectResponse | undefined;

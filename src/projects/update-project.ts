@@ -1,12 +1,15 @@
 import { 
   ProjectManager, 
   UpdateProjectParams,
-  ProjectResponse 
+  ProjectResponse
 } from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {
-  const projectManager: ProjectManager = new ProjectManager();
+  const starkKey: string = config.stark_key;
+  const env = config.environment;
+  
+  const projectManager: ProjectManager = new ProjectManager(env);
   const projectId: number = config.project_id;
 
   let updatedProjectResponse: ProjectResponse | undefined;
@@ -15,6 +18,7 @@ import config from "../config";
     name: "PROJECT_NAME",
     companyName: "COMPANY_NAME",
     contactEmail: "COMPANY_EMAIL",
+    starkKey: starkKey,
   };
   
   try {

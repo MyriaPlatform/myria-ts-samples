@@ -1,7 +1,9 @@
 import { CollectionManager } from "myria-core-sdk";
+import config from "../config";
 
 (async (): Promise<void> => {
-  const collectionManager: CollectionManager = new CollectionManager();
+  const env = config.environment;
+  const collectionManager: CollectionManager = new CollectionManager(env);
   const collectionId: number = 39;
 
   let collectionResponse;

@@ -7,7 +7,8 @@ import {
 import config from "../config";
 
 (async (): Promise<void> => {
-  const mintingManager: MintingManager = new MintingManager();
+  const env = config.environment;
+  const mintingManager: MintingManager = new MintingManager(env);
 
   const starkKey: string = config.stark_key;
   const contractAddress: string = config.collection_contract_address;
@@ -20,7 +21,7 @@ import config from "../config";
     contractAddress: contractAddress,
     uri: tokenUri,
     tokenId: tokenId,
-    description: "Asset X",
+    description: "Asset Y",
     fees: [
       {
         percentage: 2,

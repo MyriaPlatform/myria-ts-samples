@@ -3,9 +3,11 @@ import {
   GetMintedTransactionResponse,
   MintingManager
 } from "myria-core-sdk";
+import config from "../config";
 
 (async (): Promise<void> => {
-  const mintingManager: MintingManager = new MintingManager();
+  const env = config.environment;
+  const mintingManager: MintingManager = new MintingManager(env);
   const transactionId: number = 39026;
 
   const params: GetMintedTransactionParams = {

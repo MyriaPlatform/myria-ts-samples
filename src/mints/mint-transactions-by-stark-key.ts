@@ -6,7 +6,8 @@ import {
 import config from "../config";
 
 (async (): Promise<void> => {
-  const mintingManager: MintingManager = new MintingManager();
+  const env = config.environment;
+  const mintingManager: MintingManager = new MintingManager(env);
   const starkKey: string = config.stark_key;
 
   const params: GetMintedAssetsParams = {
