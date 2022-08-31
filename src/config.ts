@@ -1,7 +1,7 @@
 import { EnvTypes } from "myria-core-sdk";
 
 export default {
-  stark_key: '0x' + process.env.STARK_KEY || "",
+  stark_key: process.env.STARK_KEY || "",
   public_key: process.env.PUBLIC_KEY || "",
   private_key: process.env.PRIVATE_KEY || "",
   collection_contract_address: process.env.CONTRACT_ADDRESS || "",
