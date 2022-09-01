@@ -1,9 +1,9 @@
-import { IMyriaClient, ModuleFactory, MyriaClient, OnchainAssetManager } from "myria-core-sdk";
+import { IMyriaClient, ModuleFactory, MyriaClient } from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {
-  const starkKey = config.stark_key;
   const env = config.environment;
+  const assetId = "26149";
 
   const iClient: IMyriaClient = {
     provider: null,
@@ -17,14 +17,14 @@ import config from "../config";
 
   let assetsResponse;
   try {
-    console.log(`Retrieving assets...`);
-    assetsResponse = await assetManager.getListAssetsByStarkKey(
-      starkKey
+    console.log(`Retrieving asset...`);
+    assetsResponse = await assetManager.getAssetById(
+      assetId
     );
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Requested assets response:");
+  console.log("Requested asset response:");
   console.log(JSON.stringify(assetsResponse, null, 2));
 })();

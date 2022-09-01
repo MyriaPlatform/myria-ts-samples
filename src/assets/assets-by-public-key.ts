@@ -1,4 +1,4 @@
-import { IMyriaClient, ModuleFactory, MyriaClient, OnchainAssetManager } from "myria-core-sdk";
+import { IMyriaClient, ModuleFactory, MyriaClient } from "myria-core-sdk";
 import config from "../config";
 
 (async (): Promise<void> => {
