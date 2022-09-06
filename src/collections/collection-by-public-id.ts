@@ -4,7 +4,7 @@ import config from "../config";
 (async (): Promise<void> => {
   const env = config.environment;
   const collectionManager: CollectionManager = new CollectionManager(env);
-  const publicId: string = "27fe0077-c54a-4ce9-a87d-fe6ad3e6310d";
+  const publicId: string = "17ca4116-e191-41f2-a969-1bb27b04e7e2";
 
   let collectionResponse;
   try {
