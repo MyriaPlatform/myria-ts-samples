@@ -4,7 +4,7 @@ import config from "../config";
 (async (): Promise<void> => {
   const env = config.environment;
   const projectManager: ProjectManager = new ProjectManager(env);
-  const projectId: string = "233";
+  const projectId: string = "2";
 
   let projectDetailResponse: ProjectResponse | undefined;
   try {
