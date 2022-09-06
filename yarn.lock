@@ -2457,10 +2457,10 @@ multihashes@^0.4.15, multihashes@~0.4.15:
     multibase "^0.7.0"
     varint "^5.0.0"
 
-myria-core-sdk@^0.0.148:
-  version "0.0.148"
-  resolved "https://registry.yarnpkg.com/myria-core-sdk/-/myria-core-sdk-0.0.148.tgz#509321488fd197480c5397233d8d016fa7d3ca0f"
-  integrity sha512-kdEFgTMweDhEoHuTmCm4I3K10h7iGQrSH0sEI30UA9pqE3EMwsPIN/cult4sUuBzmcRZiiNOtjAYgcNI//cikg==
+myria-core-sdk@^0.0.150:
+  version "0.0.150"
+  resolved "https://registry.yarnpkg.com/myria-core-sdk/-/myria-core-sdk-0.0.150.tgz#39c3f94d50cd6a6c7b0622379285e203684c23b6"
+  integrity sha512-s7ApcCisc4IAVIcMptTyXmZnpB17wUM2IseSijLusZiLv3T3f7ZQLilBdMWcTvqsTgAJsUOiTBDomqqA8BpNKA==
   dependencies:
     "@babel/eslint-parser" "^7.17.0"
     "@starkware-industries/starkware-crypto-utils" "^0.0.2"
