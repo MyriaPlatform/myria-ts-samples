@@ -9,7 +9,7 @@ const keyDerivation = starkwareLib.keyDerivation;
 
   console.log("Signing a message...");
   // don't change the value of signMessage!
-  let signature = await signer.signMessage("Message request signature: ");
+  let signature = await signer.signMessage("Sign-in to your Myria L2 Wallet");
   console.log("Message signature result:", signature);
 
   console.log("Generating a Stark Key...");
