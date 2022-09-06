@@ -21,7 +21,7 @@ import config from "../config";
     contractAddress: contractAddress,
     uri: tokenUri,
     tokenId: tokenId,
-    description: "Asset Y",
+    description: "",
     fees: [
       {
         percentage: 2,
