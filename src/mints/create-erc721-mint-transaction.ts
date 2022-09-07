@@ -1,8 +1,8 @@
-import { 
-  MintingManager, 
-  MintERC721Params, 
-  MintERC721Response, 
-  FeeType 
+import {
+  MintingManager,
+  MintERC721Params,
+  MintERC721Response,
+  FeeType
 } from "myria-core-sdk";
 import config from "../config";
 
@@ -37,10 +37,9 @@ import config from "../config";
     mintTransactionResponse = await mintingManager.createMintTransactionERC721(
       params
     );
+    console.log("Mint transaction response:");
+    console.log(JSON.stringify(mintTransactionResponse, null, 2));
   } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
+    console.log(error);
   }
-
-  console.log("Mint transaction response:");
-  console.log(JSON.stringify(mintTransactionResponse, null, 2));
 })();
