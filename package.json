@@ -15,6 +15,7 @@
     "get-collection-by-id": "ts-node -r tsconfig-paths/register ./src/collections/collection-by-id.ts",
     "get-collection-by-public-id": "ts-node -r tsconfig-paths/register ./src/collections/collection-by-public-id.ts",
     "create-erc721-mint-transaction": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-erc721-mint-transaction.ts",
+    "create-bulk-erc721-mint-transaction": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-bulk-erc721-mint-transaction.ts",
     "get-mint-transaction-details": "ts-node -r tsconfig-paths/register ./src/mints/mint-transaction-details.ts",
     "get-mint-transactions-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/mint-transactions-by-stark-key.ts",
     "get-asset-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-by-id.ts",
@@ -27,7 +28,7 @@
     "@types/node": "^18.0.6",
     "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
-    "myria-core-sdk": "^0.0.150",
+    "myria-core-sdk": "^0.0.153",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
