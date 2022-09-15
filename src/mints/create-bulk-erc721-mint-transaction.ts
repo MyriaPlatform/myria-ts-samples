@@ -43,7 +43,7 @@ import config from "../config";
       }
       await timer(2000);
     }
-    console.log(`Bulk mint is completed. Minted ${bulkMintResult.length} assets...`);
+    console.log(`Bulk minting is completed. Minted ${bulkMintResult.length} assets`);
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }
