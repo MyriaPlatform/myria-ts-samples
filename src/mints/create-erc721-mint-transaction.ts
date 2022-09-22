@@ -10,6 +10,8 @@ import config from "../config";
   const env = config.environment;
   const mintingManager: MintingManager = new MintingManager(env);
 
+  const feePercentage = 2;
+
   const starkKey: string = config.stark_key;
   const contractAddress: string = config.collection_contract_address;
   const tokenUri: string = config.token_uri;
@@ -24,7 +26,7 @@ import config from "../config";
     description: "sample description",
     fees: [
       {
-        percentage: 2,
+        percentage: feePercentage,
         receiptAddress: royaltyRecipient,
         feeType: FeeType.ROYALTY
       },
