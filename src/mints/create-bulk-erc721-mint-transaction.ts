@@ -10,8 +10,8 @@ import config from "../config";
   const env = config.environment;
   const mintingManager: MintingManager = new MintingManager(env);
 
-  const startTokenId = 36;
-  const endTokenId = 36;
+  const startTokenId = 1;
+  const endTokenId = 10;
   const feePercentage = 2;
 
   const starkKey: string = config.stark_key;
