@@ -14,6 +14,7 @@
     "get-collection-list": "ts-node -r tsconfig-paths/register ./src/collections/collection-list.ts",
     "get-collection-by-id": "ts-node -r tsconfig-paths/register ./src/collections/collection-by-id.ts",
     "get-collection-by-public-id": "ts-node -r tsconfig-paths/register ./src/collections/collection-by-public-id.ts",
+    "create-metadata-schema": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/collections/create-metadata-schema.ts",
     "create-erc721-mint-transaction": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-erc721-mint-transaction.ts",
     "create-bulk-erc721-mint-transaction": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-bulk-erc721-mint-transaction.ts",
     "get-mint-transaction-details": "ts-node -r tsconfig-paths/register ./src/mints/mint-transaction-details.ts",
