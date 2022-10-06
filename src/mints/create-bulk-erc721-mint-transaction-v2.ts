@@ -44,7 +44,7 @@ import config from "../config";
     assets: assetsToMint,
     isSupportGetBulkMetadata: true,
     fees: [{
-      percentage: 10,
+      percentage: feePercentage,
       receiptAddress: royaltyRecipient,
       feeType: FeeType.ROYALTY
     }]
