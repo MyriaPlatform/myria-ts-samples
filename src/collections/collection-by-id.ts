@@ -4,7 +4,7 @@ import config from "../config";
 (async (): Promise<void> => {
   const env = config.environment;
   const collectionManager: CollectionManager = new CollectionManager(env);
-  const collectionId: number = 5;
+  const collectionId: number = 129;
 
   let collectionResponse;
   try {
