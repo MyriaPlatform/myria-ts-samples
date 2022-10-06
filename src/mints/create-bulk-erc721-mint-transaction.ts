@@ -12,8 +12,8 @@ import config from "../config";
   const mintingManager: MintingManager = new MintingManager(env);
   
   const feePercentage = 2;
-  const startTokenId = 1;
-  const endTokenId = 10;
+  const startTokenId = 11;
+  const endTokenId = 14;
 
   const starkKey: string = config.stark_key;
   const contractAddress: string = config.collection_contract_address;
@@ -47,9 +47,9 @@ import config from "../config";
       }
       await timer(2000);
     }
-    console.log(`Bulk mint is completed. Minted ${bulkMintResult.length} assets...`);
+    console.log(`Bulk minting is completed. Minted ${bulkMintResult.length} assets...`);
+    // console.log(bulkMintResult);
   } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
+    console.log(error);
   }
-  // console.log(bulkMintResult);
 })();

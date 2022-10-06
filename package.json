@@ -17,6 +17,7 @@
     "create-metadata-schema": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/collections/create-metadata-schema.ts",
     "create-erc721-mint-transaction": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-erc721-mint-transaction.ts",
     "create-bulk-erc721-mint-transaction": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-bulk-erc721-mint-transaction.ts",
+    "create-bulk-erc721-mint-transaction-v2": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/create-bulk-erc721-mint-transaction-v2.ts",
     "get-mint-transaction-details": "ts-node -r tsconfig-paths/register ./src/mints/mint-transaction-details.ts",
     "get-mint-transactions-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/mint-transactions-by-stark-key.ts",
     "get-asset-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-by-id.ts",
