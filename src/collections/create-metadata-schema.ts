@@ -1,4 +1,5 @@
 import {
+  CollectionDetailsResponseData,
   CollectionManager,
   CreateCollectionMetadataParams,
   Metadata
@@ -30,7 +31,7 @@ import config from "../config";
     starkKey: starkKey
   };
 
-  let response: any;
+  let response: CollectionDetailsResponseData;
   try {
     console.log("Creating the metadata schema...");
     response = await collectionManager.createCollectionMetadataByAddress(contractAddress, params);
