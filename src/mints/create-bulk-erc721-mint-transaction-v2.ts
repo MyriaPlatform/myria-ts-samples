@@ -12,8 +12,8 @@ import config from "../config";
   const mintingManager: MintingManager = new MintingManager(env);
 
   const feePercentage = 2;
-  const startTokenId = 31;
-  const endTokenId = 33;
+  const startTokenId = 1;
+  const endTokenId = 10;
 
   const starkKey: string = config.stark_key;
   const contractAddress: string = config.collection_contract_address;
