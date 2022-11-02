@@ -59,7 +59,7 @@ TOKEN_ID=           <unique identifier of a given asset, should be an incrementa
 Generates a Stark Key derived from a given Web3 private key.
 
 Requirements: 
-- Provide `PRIVATE_KEY` environment variable
+1. Provide `PRIVATE_KEY` environment variable
 
 ```bash
 npm run generate-stark-key
@@ -95,7 +95,7 @@ npm run get-project-list
 Returns details of a given Myria project by its id.
 
 Requirements:
-- Replace [projectId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/projects/project-details.ts#L7) value with your project id
+1. Replace [projectId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/projects/project-details.ts#L7) value with your project id
 
 ```bash
 npm run get-project-details
@@ -160,7 +160,7 @@ npm run get-collection-list
 Returns details of a given Myria collection by its id.
 
 Requirements:
-- Replace [collectionId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/collections/collection-by-id.ts#L7) value with your collection id
+1. Replace [collectionId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/collections/collection-by-id.ts#L7) value with your collection id
 
 ```bash
 npm run get-collection-by-id
@@ -171,7 +171,7 @@ npm run get-collection-by-id
 Returns details of a given Myria collection by its public id.
 
 Requirements:
-- Replace [publicId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/collections/collection-by-public-id.ts#L7) value with your collection public id
+1. Replace [publicId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/collections/collection-by-public-id.ts#L7) value with your collection public id
 
 ```bash
 npm run get-collection-by-public-id
@@ -241,7 +241,7 @@ npm run get-mint-transaction-details
 Returns a list of mint transactions by a given Stark Key.
 
 Requirements:
-- Provide `STARK_KEY` environment variable
+1. Provide `STARK_KEY` environment variable
 
 ```bash
 npm run get-mint-transactions-by-stark-key
@@ -254,7 +254,7 @@ npm run get-mint-transactions-by-stark-key
 Returns details of a given Myria asset by its id.
 
 Requirements:
-- Replace [assetId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/assets/asset-by-id.ts#L6) value with your asset id
+1. Replace [assetId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/assets/asset-by-id.ts#L6) value with your asset id
 
 ```bash
 npm run get-asset-by-id
@@ -265,7 +265,7 @@ npm run get-asset-by-id
 Returns assets by its Stark Key.
 
 Requirements:
-- Provide `STARK_KEY` environment variable
+1. Provide `STARK_KEY` environment variable
 
 ```bash
 npm run get-assets-by-stark-key
@@ -276,7 +276,7 @@ npm run get-assets-by-stark-key
 Returns all assets minted by a given public key.
 
 Requirements:
-- Provide `PUBLIC_KEY` environment variable
+1. Provide `PUBLIC_KEY` environment variable
 
 ```bash
 npm run get-assets-by-public-key
@@ -287,8 +287,8 @@ npm run get-assets-by-public-key
 Returns details of a given asset vault by its asset id.
 
 Requirements:
-- Provide `STARK_KEY` environment variable
-- Replace [assetId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/assets/asset-vault-details.ts#L7) value with your asset id
+1. Provide `STARK_KEY` environment variable
+2. Replace [assetId](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/assets/asset-vault-details.ts#L7) value with your asset id
 
 ```bash
 npm run get-asset-vault-details
