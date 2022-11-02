@@ -138,7 +138,7 @@ Creates a metadata schema for existing collections on Myria.
 
 Requirements:
 1. Provide `CONTRACT_ADDRESS` and `STARK_KEY`  environment variables
-2. Replace [metadataSchema](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/collections/create-metadata-schema.ts#L16) values with your metadata schema details details. Each object of the array contains the following properties:
+2. Replace [metadataSchema](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/collections/create-metadata-schema.ts#L16) values with your metadata schema details. Each object of the array contains the following properties:
 - `name` - the name of the metadata schema attribute. Should match `trait_type` in the [Opensea metadata schema](https://docs.opensea.io/docs/metadata-standards#attributes)
 - `type` - the type of the metadata schema attribute. Accepts `enum`, `string`, and `number`. In most cases, you should use `enum`
 - `filterable` - the flag that defines if the attribute should be filterable on the Myria marketplace. Accepts `true` or `false`
