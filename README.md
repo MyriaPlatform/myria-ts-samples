@@ -74,9 +74,9 @@ Creates a project on Myria.
 Requirements:
 1. Provide the `CONTRACT_ADDRESS` environment variable
 2. Replace [params](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/projects/create-project.ts#L14) values with your project details:
-- `name` - project name
-- `companyName` - company name that will be working on the project
-- `contactEmail` - contact email
+- `name` - the project name
+- `companyName` - the company name that will be working on the project
+- `contactEmail` - the contact email
 
 ```bash
 npm run create-project
@@ -150,6 +150,12 @@ npm run create-metadata-schema
 #### 3.3 Get the collection list
 
 Returns a list of collections created on Myria.
+
+Requirements:
+1. Replace [params](https://github.com/MyriaPlatform/myria-ts-samples/blob/master/src/collections/collection-list.ts#L8) values with your request parameters:
+- `limit` - the max number of items per request
+- `page` - the page number. Each page will contain the number of items based on the `limit`
+- `isHot` - the flag that defines if the returned items are listed as hot on the Myria marketplace
 
 ```bash
 npm run get-collection-list
