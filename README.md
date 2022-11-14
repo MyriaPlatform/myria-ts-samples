@@ -300,14 +300,14 @@ Requirements:
 npm run get-asset-vault-details
 ```
 
-#### 5.4 Get asset vault details
+#### 5.5 Refresh asset metadata
 
-Sync metadata for a given asset by its asset id
+Refresh metadata for a given asset by its asset id
 
 Requirements:
 1. Provide `STARK_KEY` environment variable
 2. Provide `ASSET_ID` environment variable
 
 ```bash
-npm run sync-asset-attributes
+npm run refresh-asset-metadata
 ```
