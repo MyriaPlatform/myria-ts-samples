@@ -299,3 +299,15 @@ Requirements:
 ```bash
 npm run get-asset-vault-details
 ```
+
+#### 5.4 Get asset vault details
+
+Sync metadata for a given asset by its asset id
+
+Requirements:
+1. Provide `STARK_KEY` environment variable
+2. Provide `ASSET_ID` environment variable
+
+```bash
+npm run sync-asset-attributes
+```

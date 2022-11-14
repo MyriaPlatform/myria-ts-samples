@@ -10,5 +10,6 @@ export default {
   project_public_id: process.env.PROJECT_PUBLIC_ID || "",
   token_uri: process.env.TOKEN_URI || "",
   token_id: process.env.TOKEN_ID || "1",
+  assetId: process.env.ASSET_ID || "1",
   environment: EnvTypes.STAGING
 }

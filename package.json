@@ -23,7 +23,8 @@
     "get-asset-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-by-id.ts",
     "get-assets-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/assets-by-stark-key.ts",
     "get-assets-by-public-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/assets-by-public-key.ts",
-    "get-asset-vault-details": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-vault-details.ts"
+    "get-asset-vault-details": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-vault-details.ts",
+    "sync-asset-attributes": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/sync-asset-attributes.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
