@@ -299,3 +299,15 @@ Requirements:
 ```bash
 npm run get-asset-vault-details
 ```
+
+#### 5.5 Refresh asset metadata
+
+Refresh metadata for a given asset by its asset id
+
+Requirements:
+1. Provide `STARK_KEY` environment variable
+2. Provide `ASSET_ID` environment variable
+
+```bash
+npm run refresh-asset-metadata
+```
