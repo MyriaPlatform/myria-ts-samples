@@ -4,7 +4,7 @@ import config from "../config";
 (async (): Promise<void> => {
   const env = config.environment;
   const starkKey = config.stark_key;
-  const assetId = "0x400d7f08c2bd93fded45000d55f20a1eb52a8d90c6912a1315533179219937c";
+  const assetId = "0x400663ffc30c382646de8ba441bef0432e915d25d645911c3d76b819bdca0cf";
 
   const iClient: IMyriaClient = {
     provider: null,
@@ -26,6 +26,6 @@ import config from "../config";
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Requested response:");
+  console.log("Response:");
   console.log(JSON.stringify(assetsResponse, null, 2));
 })();
