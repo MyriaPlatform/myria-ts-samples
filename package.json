@@ -22,6 +22,8 @@
     "get-mint-transaction-details": "ts-node -r tsconfig-paths/register ./src/mints/mint-transaction-details.ts",
     "get-mint-transactions-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/mints/mint-transactions-by-stark-key.ts",
     "get-asset-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-by-id.ts",
+    "get-nft-assets": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/nft-assets.ts",
+    "get-all-assets": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/all-assets.ts",
     "get-assets-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/assets-by-stark-key.ts",
     "get-list-assets-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/list-assets-by-stark-key.ts",
     "get-assets-by-public-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/assets-by-public-key.ts",
