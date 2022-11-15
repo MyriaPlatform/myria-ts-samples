@@ -18,12 +18,12 @@ import config from "../config";
 
   let syncAssets;
   try {
-    console.log(`Resfresh asset metadata...`);
+    console.log(`Refreshing asset metadata...`);
     syncAssets = await assetManager.refreshAssetMetadata(assetId, starkKey );
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Requested asset sync response:");
+  console.log("Refreshed metadata response:");
   console.log(JSON.stringify(syncAssets, null, 2));
 })();
