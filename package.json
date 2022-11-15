@@ -28,6 +28,8 @@
     "get-list-assets-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/list-assets-by-stark-key.ts",
     "get-assets-by-public-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/assets-by-public-key.ts",
     "get-assets-by-collection-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/assets-by-collection-id.ts",
+    "get-assets-with-filter": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/assets-with-filter.ts",
+    "get-full-info-asset-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/full-info-asset-by-stark-key.ts",
     "get-asset-vault-details": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-vault-details.ts",
     "refresh-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/refresh-asset-metadata.ts"
   },
