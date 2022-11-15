@@ -24,6 +24,6 @@ import config from "../config";
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Refreshed metadata response:");
+  console.log("Response:");
   console.log(JSON.stringify(syncAssets, null, 2));
 })();

@@ -17,7 +17,7 @@ import config from "../config";
 
   let assetsResponse;
   try {
-    console.log(`Retrieving asset...`);
+    console.log(`Retrieving assets...`);
     assetsResponse = await assetManager.getListAssetsByStarkKey(
       starkKey
     );

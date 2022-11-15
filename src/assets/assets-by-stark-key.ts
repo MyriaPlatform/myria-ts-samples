@@ -25,6 +25,6 @@ import config from "../config";
     throw new Error(JSON.stringify(error, null, 2));
   }
 
-  console.log("Requested assets response:");
+  console.log("Response:");
   console.log(JSON.stringify(assetsResponse, null, 2));
 })();
