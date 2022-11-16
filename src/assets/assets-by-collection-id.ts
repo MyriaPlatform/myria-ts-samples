@@ -22,15 +22,10 @@ import config from "../config";
     filterValue: [""]
   }
 
-  let assetsResponse;
-  try {
-    console.log(`Retrieving assets...`);
-    assetsResponse = await assetManager.getAssetsByCollectionId(
-      payload
-    );
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log(`Retrieving assets...`);
+  const assetsResponse = await assetManager.getAssetsByCollectionId(
+    payload
+  );
 
   console.log("Response:");
   console.log(JSON.stringify(assetsResponse, null, 2));

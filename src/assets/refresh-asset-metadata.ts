@@ -3,8 +3,8 @@ import config from "../config";
 
 (async (): Promise<void> => {
   const env = config.environment;
-  const assetId = config.assetId;
   const starkKey = config.stark_key;
+  const assetId = "13287";
 
   const iClient: IMyriaClient = {
     provider: null,
@@ -16,14 +16,9 @@ import config from "../config";
   const moduleFactory = new ModuleFactory(mClient);
   const assetManager = moduleFactory.getAssetOnchainManager();
 
-  let syncAssets;
-  try {
-    console.log(`Refreshing asset metadata...`);
-    syncAssets = await assetManager.refreshAssetMetadata(assetId, starkKey );
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log(`Refreshing asset metadata...`);
+  const assets = await assetManager.refreshAssetMetadata(assetId, starkKey);
 
   console.log("Response:");
-  console.log(JSON.stringify(syncAssets, null, 2));
+  console.log(JSON.stringify(assets, null, 2));
 })();

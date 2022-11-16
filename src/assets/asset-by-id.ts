@@ -3,7 +3,7 @@ import config from "../config";
 
 (async (): Promise<void> => {
   const env = config.environment;
-  const assetId = "26149";
+  const assetId = "13287";
 
   const iClient: IMyriaClient = {
     provider: null,
@@ -15,15 +15,10 @@ import config from "../config";
   const moduleFactory = new ModuleFactory(mClient);
   const assetManager = moduleFactory.getAssetOnchainManager();
 
-  let assetsResponse;
-  try {
-    console.log(`Retrieving asset...`);
-    assetsResponse = await assetManager.getAssetById(
-      assetId
-    );
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log(`Retrieving asset...`);
+  const assetsResponse = await assetManager.getAssetById(
+    assetId
+  );
 
   console.log("Response:");
   console.log(JSON.stringify(assetsResponse, null, 2));

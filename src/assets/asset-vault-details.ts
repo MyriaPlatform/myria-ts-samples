@@ -16,16 +16,10 @@ import config from "../config";
   const moduleFactory = new ModuleFactory(mClient);
   const assetManager = moduleFactory.getAssetOnchainManager();
 
-  let assetsResponse;
-  try {
-    console.log(`Retrieving vault details...`);
-    assetsResponse = await assetManager.getAssetVaultDetails(
-      starkKey, assetId
-    );
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
-
+  console.log(`Retrieving vault details...`);
+  const assetsResponse = await assetManager.getAssetVaultDetails(
+    starkKey, assetId
+  );
   console.log("Response:");
   console.log(JSON.stringify(assetsResponse, null, 2));
 })();

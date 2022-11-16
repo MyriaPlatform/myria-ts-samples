@@ -15,16 +15,11 @@ import config from "../config";
   const moduleFactory = new ModuleFactory(mClient);
   const assetManager = moduleFactory.getAssetOnchainManager();
 
-  let assetsResponse;
-  try {
-    console.log(`Retrieving assets...`);
-    assetsResponse = await assetManager.getListAssetsByStarkKey(
-      starkKey
-    );
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
-
+  console.log(`Retrieving assets...`);
+  const assetsResponse = await assetManager.getListAssetsByStarkKey(
+    starkKey
+  );
+  
   console.log("Response:");
   console.log(JSON.stringify(assetsResponse, null, 2));
 })();
