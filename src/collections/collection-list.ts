@@ -11,13 +11,8 @@ import config from "../config";
     isHot: false
   }
 
-  let collectionResponse;
-  try {
-    console.log(`Retrieving collection list...`);
-    collectionResponse = await collectionManager.getCollectionList(params);
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log(`Retrieving collection list...`);
+  const collectionResponse = await collectionManager.getCollectionList(params);
 
   console.log("Requested collection list:");
   console.log(JSON.stringify(collectionResponse, null, 2));

@@ -31,13 +31,8 @@ import config from "../config";
     starkKey: starkKey
   };
 
-  let response: CollectionDetailsResponseData;
-  try {
-    console.log("Creating the metadata schema...");
-    response = await collectionManager.createCollectionMetadataByAddress(contractAddress, params);
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log("Creating the metadata schema...");
+  const response: CollectionDetailsResponseData = await collectionManager.createCollectionMetadataByAddress(contractAddress, params);
 
   console.log("Metadata schema response:");
   console.log(JSON.stringify(response, null, 2));

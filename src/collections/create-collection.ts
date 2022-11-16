@@ -25,13 +25,8 @@ import config from "../config";
     starkKey: starkKey,
   };
 
-  let collectionResponse: CreateCollectionResponse | undefined;
-  try {
-    console.log("Creating the collection...");
-    collectionResponse = await collectionManager.createCollection(params);
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log("Creating the collection...");
+  const collectionResponse: CreateCollectionResponse = await collectionManager.createCollection(params);
 
   console.log("Created collection response:");
   console.log(JSON.stringify(collectionResponse, null, 2));
