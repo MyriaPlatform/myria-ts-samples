@@ -1,7 +1,7 @@
-import { 
-  GetMintedAssetsParams, 
-  GetMintedAssetsResponse, 
-  MintingManager 
+import {
+  GetMintedAssetsParams,
+  GetMintedAssetsResponse,
+  MintingManager
 } from "myria-core-sdk";
 import config from "../config";
 
@@ -14,17 +14,12 @@ import config from "../config";
     starkKey: starkKey,
   };
 
-  let mintTransactionResponse: GetMintedAssetsResponse | undefined;
-  try {
-    console.log(
-      `Retrieving a list of mint transactions with ${starkKey} stark key...`
-    );
-    mintTransactionResponse = await mintingManager.getMintedAssetByStarkKey(
-      params
-    );
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log(
+    `Retrieving a list of mint transactions with ${starkKey} stark key...`
+  );
+  const mintTransactionResponse: GetMintedAssetsResponse = await mintingManager.getMintedAssetByStarkKey(
+    params
+  );
 
   console.log("Mint transactions response:");
   console.log(JSON.stringify(mintTransactionResponse, null, 2));

@@ -5,13 +5,9 @@ import config from "../config";
   const env = config.environment;
   const projectManager: ProjectManager = new ProjectManager(env);
 
-  let projectListResponse: ProjectResponse | undefined;
-  try {
-    console.log("Retrieving the project list...");
-    projectListResponse = await projectManager.getProjectList();
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log("Retrieving the project list...");
+  const projectListResponse: ProjectResponse = await projectManager.getProjectList();
+
   console.log("Project list response:");
   console.log(JSON.stringify(projectListResponse, null, 2));
 })();

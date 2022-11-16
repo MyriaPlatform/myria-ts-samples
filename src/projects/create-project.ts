@@ -10,7 +10,6 @@ import config from "../config";
   const projectManager: ProjectManager = new ProjectManager(env);
   const starkKey: string = config.stark_key;
 
-  let newProjectResponse: ProjectResponse | undefined;
   const params: CreateProjectParams = {
     name: "PROJECT_NAME",
     companyName: "COMPANY_NAME",
@@ -18,12 +17,8 @@ import config from "../config";
     starkKey: starkKey,
   };
 
-  try {
-    console.log("Creating the project...");
-    newProjectResponse = await projectManager.createProject(params);
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log("Creating the project...");
+  const newProjectResponse: ProjectResponse = await projectManager.createProject(params);
 
   console.log("Created project response:");
   console.log(JSON.stringify(newProjectResponse, null, 2));

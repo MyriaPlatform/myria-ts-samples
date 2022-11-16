@@ -49,11 +49,8 @@ import config from "../config";
       feeType: FeeType.ROYALTY
     }]
   };
-  try {
-    console.log("Initiating a bulk minting...");
-    const mintResult: BlukMintableERC721ResponseData = await mintingManager.bulkMintableNftERC721(params);
-    console.log("Bulk minting is completed. Result: ", mintResult);
-  } catch (error) {
-    console.log(error);
-  }
+
+  console.log("Initiating a bulk minting...");
+  const mintResult: BlukMintableERC721ResponseData = await mintingManager.bulkMintableNftERC721(params);
+  console.log("Bulk minting is completed. Result: ", mintResult);
 })();

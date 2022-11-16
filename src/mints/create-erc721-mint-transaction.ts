@@ -33,15 +33,11 @@ import config from "../config";
     ],
   };
 
-  let mintTransactionResponse: MintERC721Response | undefined;
-  try {
-    console.log("Initiating a mint transaction...");
-    mintTransactionResponse = await mintingManager.createMintTransactionERC721(
-      params
-    );
-    console.log("Mint transaction response:");
-    console.log(JSON.stringify(mintTransactionResponse, null, 2));
-  } catch (error) {
-    console.log(error);
-  }
+  console.log("Initiating a mint transaction...");
+  const mintTransactionResponse: MintERC721Response = await mintingManager.createMintTransactionERC721(
+    params
+  );
+  
+  console.log("Mint transaction response:");
+  console.log(JSON.stringify(mintTransactionResponse, null, 2));
 })();

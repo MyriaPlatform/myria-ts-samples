@@ -14,17 +14,12 @@ import config from "../config";
     transactionId: transactionId,
   };
 
-  let mintTransactionResponse: GetMintedTransactionResponse | undefined;
-  try {
-    console.log(
-      `Retrieving details of the ${transactionId} mint transaction...`
-    );
-    mintTransactionResponse = await mintingManager.getMintTransactionList(
-      params
-    );
-  } catch (error) {
-    throw new Error(JSON.stringify(error, null, 2));
-  }
+  console.log(
+    `Retrieving details of the ${transactionId} mint transaction...`
+  );
+  const mintTransactionResponse: GetMintedTransactionResponse = await mintingManager.getMintTransactionList(
+    params
+  );
 
   console.log("Mint transaction response:");
   console.log(JSON.stringify(mintTransactionResponse, null, 2));
