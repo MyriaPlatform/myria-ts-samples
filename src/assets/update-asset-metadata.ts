@@ -34,7 +34,7 @@ import config from "../config";
     type: 1
   }
 
-  console.log(`Retrieving assets...`);
+  console.log(`Updating asset metadata...`);
   const assetsResponse = await assetManager.updateAssetMetadataByAssetId(
     assetId,
     params
