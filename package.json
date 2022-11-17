@@ -33,7 +33,9 @@
     "get-full-info-asset-by-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/full-info-asset-by-stark-key.ts",
     "get-asset-equal-metadata-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-equal-metadata-by-id.ts",
     "get-asset-vault-details": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-vault-details.ts",
-    "refresh-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/refresh-asset-metadata.ts"
+    "refresh-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/refresh-asset-metadata.ts",
+    "update-asset-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-by-id.ts",
+    "update-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-metadata.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
