@@ -32,7 +32,7 @@ import config from "../config";
   };
 
   console.log("Creating the metadata schema...");
-  const response: CollectionDetailsResponseData = await collectionManager.createCollectionMetadataByAddress(contractAddress, params);
+  const response = await collectionManager.createCollectionMetadataByAddress(contractAddress, params);
 
   console.log("Metadata schema response:");
   console.log(JSON.stringify(response, null, 2));
