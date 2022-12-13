@@ -35,14 +35,15 @@
     "get-asset-vault-details": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/asset-vault-details.ts",
     "refresh-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/refresh-asset-metadata.ts",
     "update-asset-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-by-id.ts",
-    "update-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-metadata.ts"
+    "update-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-metadata.ts",
+    "get-tokens": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/common/tokens.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
     "@types/node": "^18.0.6",
     "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
-    "myria-core-sdk": "^0.0.165",
+    "myria-core-sdk": "^0.0.168",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
