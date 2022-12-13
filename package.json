@@ -36,7 +36,8 @@
     "refresh-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/refresh-asset-metadata.ts",
     "update-asset-by-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-by-id.ts",
     "update-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-metadata.ts",
-    "get-tokens": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/common/tokens.ts"
+    "get-erc20-balance": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/user/erc20-balance.ts",
+    "get-eth-balance": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/user/eth-balance.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
