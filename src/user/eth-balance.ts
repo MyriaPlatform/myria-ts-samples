@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import { IMyriaClient, ModuleFactory, MyriaClient } from "myria-core-sdk";
 import config from "../config";
 
@@ -20,4 +21,8 @@ import config from "../config";
 
   console.log("Response:");
   console.log(JSON.stringify(response, null, 2));
+
+  const pureEthBalance = ethers.utils.formatEther(response.amount)
+  console.log('Ethereum balance: ', pureEthBalance);
+
 })();
