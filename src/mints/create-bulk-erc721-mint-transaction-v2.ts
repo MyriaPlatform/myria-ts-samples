@@ -2,8 +2,8 @@ import {
   MintingManager,
   FeeType,
   MintAssetErc721Info,
-  BulkMintableERC721Params,
-  BlukMintableERC721ResponseData
+  BulkMintERC721Params,
+  BulkMintERC721ResponseData,
 } from "myria-core-sdk";
 import config from "../config";
 
@@ -12,6 +12,15 @@ import config from "../config";
   const mintingManager: MintingManager = new MintingManager(env);
 
   const feePercentage = 2;
+  // const startTokenId = 31;
+  // const endTokenId = 32;
+
+  // This is the token range you want to mint (from - to) example to mint 10 tokens
+  // There are two version of minting, for bulk-mint, it's recommend to use v2.
+  // Use the command defined on package json and trigger mint
+  // After you done with the mint, can access to the developer portal page and access to assets page under 
+  // specific collection for checking
+  // There are no failed mint means all of yours NFTs/assets have been minted successfully
   const startTokenId = 1;
   const endTokenId = 10;
 
@@ -28,17 +37,12 @@ import config from "../config";
       uri: `${metadataApiUrl}/${i}`,
       tokenId: String(i),
       description: 'mry asset',
-      fees: [{
-        percentage: feePercentage,
-        receiptAddress: royaltyRecipient,
-        feeType: FeeType.ROYALTY
-      }]
     };
     assetsToMint.push(asset);
   }
   console.log(assetsToMint);
 
-  const params: BulkMintableERC721Params = {
+  const params: BulkMintERC721Params = {
     starkKey: starkKey,
     contractAddress: contractAddress,
     assets: assetsToMint,
@@ -50,7 +54,8 @@ import config from "../config";
     }]
   };
 
+  console.log(JSON.stringify(params));
   console.log("Initiating a bulk minting...");
-  const mintResult: BlukMintableERC721ResponseData = await mintingManager.bulkMintableNftERC721(params);
-  console.log("Bulk minting is completed. Result: ", mintResult);
+  const mintResult: BulkMintERC721ResponseData = await mintingManager.bulkMintNfts(params);
+  console.log("Bulk minting is completed. Result: ", JSON.stringify(mintResult));
 })();

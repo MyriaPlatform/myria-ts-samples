@@ -12,8 +12,8 @@ import config from "../config";
   const mintingManager: MintingManager = new MintingManager(env);
 
   const feePercentage = 2;
-  const startTokenId = 1;
-  const endTokenId = 10;
+  const startTokenId = 100;
+  const endTokenId = 101;
 
   const starkKey: string = config.stark_key;
   const contractAddress: string = config.collection_contract_address;
@@ -22,7 +22,8 @@ import config from "../config";
 
   let bulkMintResult = [];
   console.log("Initiating a bulk minting...");
-  for (let i = startTokenId; i < endTokenId; i++) {
+  for (let i = startTokenId; i <= endTokenId; i++) {
+    console.log('Start minting with token id ', i);
     const params: MintERC721Params = {
       starkKey: starkKey,
       contractAddress: contractAddress,
@@ -33,13 +34,17 @@ import config from "../config";
         {
           percentage: feePercentage,
           receiptAddress: royaltyRecipient,
-          feeType: FeeType.ROYALTY
         },
       ],
+      requestId: "unique-request-id",
+      partnerRefId: "321",
+      requestDescription: "123"
     };
     const mintTransactionResponse = await mintingManager.createMintTransactionERC721(
       params
     );
+    console.log('mintTransactionResponse -> ', mintTransactionResponse);
+    console.log('Mint payload ', JSON.stringify(params));
     if (mintTransactionResponse) {
       console.log(`Minted asset #${i}`);
       bulkMintResult.push(mintTransactionResponse);

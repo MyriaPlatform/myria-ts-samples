@@ -13,17 +13,34 @@ import config from "../config";
   const contractAddress: string = config.collection_contract_address;
   const starkKey: string = config.stark_key;
 
+  // Example of metadata schema
   const metadataSchema: Metadata[] = [
     {
-      name: "ATTRIBUTE_NAME_1",
-      type: "enum",
+      name: "alliance",
+      type: "string",
       filterable: true
     },
     {
-      name: "ATTRIBUTE_NAME_N",
-      type: "enum",
+      name: "rarity",
+      type: "string",
+      filterable: true
+    },
+    {
+      name: "type",
+      type: "string",
+      filterable: true
+    },
+    {
+      name: "description",
+      type: "string",
+      filterable: true
+    },
+    {
+      name: "name",
+      type: "string",
       filterable: true
     }
+
   ];
 
   const params: CreateCollectionMetadataParams = {
