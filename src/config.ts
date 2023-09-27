@@ -13,5 +13,6 @@ export default {
   assetId: process.env.ASSET_ID || "1",
   environment: EnvTypes.STAGING,
   accountId: process.env.ACCOUNT_ID || '',
-  apiKey: process.env.API_KEY || ''
+  apiKey: process.env.API_KEY || '',
+  collectionId: Number(process.env.COLLECTION_ID || "1"),
 }

@@ -20,11 +20,11 @@ import config from "../config";
   const endTokenId = 1017;
 
   const requestId: string = uuid();
-  const partnerRefId: string = "partnerRefId";
+  const partnerRefId: string = String(config.project_id);      // Project Id
   const groupRequestId: string = requestId;
-  const requestDescription: string = "Description request";
+  const requestDescription: string = "Description request";    //Whatever string
   const accountId: string = config.accountId;
-  const collectionId: number = 123;
+  const collectionId: number = Number(config.collectionId);
   const isSupportGetBulkMetadata = true;
   const royaltyRecipient: string = config.public_key;
   const apiKey = config.apiKey;
@@ -43,7 +43,7 @@ import config from "../config";
           feeType: FeeType.ROYALTY,
         },
       ],
-      //   mintForStarkKey: “destinate receiver / player of games”
+      //   mintForStarkKey: "destinate receiver / player of games"
       trackingId: "123", //Whatever string that Partner/Developer want to add for minted assets
     };
     assetsToMintAsync.push(asset);
