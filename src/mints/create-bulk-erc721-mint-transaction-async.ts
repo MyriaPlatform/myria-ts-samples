@@ -9,22 +9,22 @@ import {
 } from "myria-core-sdk";
 import { v4 as uuid } from "uuid";
 const fs = require("fs");
+const path = require("path");
 import config from "../config";
 
 (async () => {
   const mintingManager: MintingManager = new MintingManager(EnvTypes.STAGING);
 
   const feePercentage = 2;
-  const startTokenId = 1010;
-  const endTokenId = 1011;
+  const startTokenId = 1016;
+  const endTokenId = 1017;
 
-//   const requestId: string = '0384bc05-a895-4965-8a13-87968412f8f7';
   const requestId: string = uuid();
   const partnerRefId: string = "partnerRefId";
   const groupRequestId: string = requestId;
   const requestDescription: string = "Description request";
   const accountId: string = config.accountId;
-  const collectionId: number = 920;
+  const collectionId: number = 123;
   const isSupportGetBulkMetadata = true;
   const royaltyRecipient: string = config.public_key;
   const apiKey = config.apiKey;
@@ -43,11 +43,8 @@ import config from "../config";
           feeType: FeeType.ROYALTY,
         },
       ],
-      mintForStarkKey:
-        i === startTokenId
-          ? "0x606ee35b4c52bcec9906a456c339b628b8d56f0ce6edc8d00a9d5e67922efc4"
-          : undefined,
-      trackingId: "123",
+      //   mintForStarkKey: “destinate receiver / player of games”
+      trackingId: "123", //Whatever string that Partner/Developer want to add for minted assets
     };
     assetsToMintAsync.push(asset);
   }
@@ -88,7 +85,7 @@ import config from "../config";
           tokenAddress: validItem.tokenAddress,
           tokenId: validItem.tokenId,
           collectionId: validItem.collectionId,
-          requestDescription: requestDescription,
+          requestDescription,
         };
       }
     );
@@ -110,8 +107,12 @@ import config from "../config";
     };
     const jsonContent = JSON.stringify(jsonData);
 
-    fs.writeFile(
-      `Bulk_Mint_${groupRequestId}_${new Date().getTime()}.json`,
+    fs.writeFileSync(
+      path.join(
+        __dirname,
+        "../../mint-response",
+        `Bulk_Mint_${groupRequestId}_${new Date().getTime()}.json`
+      ),
       jsonContent,
       "utf8",
       function (err: any) {
