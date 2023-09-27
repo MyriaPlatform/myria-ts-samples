@@ -11,5 +11,7 @@ export default {
   token_uri: process.env.TOKEN_URI || "",
   token_id: process.env.TOKEN_ID || "1",
   assetId: process.env.ASSET_ID || "1",
-  environment: EnvTypes.STAGING
+  environment: EnvTypes.STAGING,
+  accountId: process.env.ACCOUNT_ID || '',
+  apiKey: process.env.API_KEY || ''
 }
