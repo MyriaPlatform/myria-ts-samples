@@ -1,6 +1,6 @@
 import {
-  BulkMintAsyncParams,
-  BulkMintERC721AsyncResponseData,
+  BulkMintQueueAsyncParams,
+  BulkMintQueueAsyncResponseData,
   EnvTypes,
   FeeType,
   MintAssetErc721InfoAsync,
@@ -16,8 +16,8 @@ import config from "../config";
   const mintingManager: MintingManager = new MintingManager(EnvTypes.STAGING);
 
   const feePercentage = 2;
-  const startTokenId = 1016;
-  const endTokenId = 1017;
+  const startTokenId = 1035;
+  const endTokenId = 1135;
 
   const requestId: string = uuid();
   const partnerRefId: string = String(config.project_id);      // Project Id
@@ -50,7 +50,7 @@ import config from "../config";
   }
   console.log(assetsToMintAsync);
 
-  const params: BulkMintAsyncParams = {
+  const params: BulkMintQueueAsyncParams = {
     apiKey,
     requestId,
     partnerRefId,
@@ -69,10 +69,11 @@ import config from "../config";
     ],
   };
 
+  console.log('SDK Payload -> ', JSON.stringify(params));
+
   console.log("Initiating a bulk minting...");
   try {
-    const mintAsyncResult: BulkMintERC721AsyncResponseData =
-      await mintingManager.bulkMintNftsAsync(params);
+    const mintAsyncResult: BulkMintQueueAsyncResponseData = await mintingManager.bulkMintNftsQueueAsync(params);
     console.log("Bulk minting is completed. Result: ", mintAsyncResult);
 
     const mintData = mintAsyncResult.validItems.map(
