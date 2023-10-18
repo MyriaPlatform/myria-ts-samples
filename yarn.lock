@@ -3511,10 +3511,10 @@ multipipe@^0.1.2:
   dependencies:
     duplexer2 "0.0.2"
 
-myria-core-sdk@0.0.231-test-mintfor-async-v5:
-  version "0.0.231-test-mintfor-async-v5"
-  resolved "https://registry.yarnpkg.com/myria-core-sdk/-/myria-core-sdk-0.0.231-test-mintfor-async-v5.tgz#13ba31b2086aea48f6ef4682f775ad8f6f4c477d"
-  integrity sha512-/dRSluA6V+GeEtQlX9TOzyaHv6GYdKpPPzUspX8iY/jwag60aIKcRguY9HkUbv4gSHsR3B9LOQwm9w5Mv8utjA==
+myria-core-sdk@0.0.242:
+  version "0.0.242"
+  resolved "https://registry.yarnpkg.com/myria-core-sdk/-/myria-core-sdk-0.0.242.tgz#4194d994ee7af7c30dc127daa7d96f46f82edd1d"
+  integrity sha512-48kmNGlAA3P9CntwtH5sS+RndqZkMJCIqqLphhTE6SJoC+d1ddh8DH4iKLCMCwNQhExtUtj7A062T815erU28g==
   dependencies:
     "@babel/eslint-parser" "^7.17.0"
     "@starkware-industries/starkware-crypto-utils" "^0.0.2"
