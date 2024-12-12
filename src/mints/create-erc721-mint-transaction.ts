@@ -31,6 +31,9 @@ import config from "../config";
         feeType: FeeType.ROYALTY
       },
     ],
+    requestId: "",
+    partnerRefId: "",
+    requestDescription: ""
   };
 
   console.log("Initiating a mint transaction...");
