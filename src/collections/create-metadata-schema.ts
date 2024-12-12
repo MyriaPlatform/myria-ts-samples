@@ -2,7 +2,6 @@ import {
   CollectionDetailsResponseData,
   CollectionManager,
   CreateCollectionMetadataParams,
-  Metadata
 } from "myria-core-sdk";
 import config from "../config";
 
@@ -14,7 +13,7 @@ import config from "../config";
   const starkKey: string = config.stark_key;
 
   // Example of metadata schema
-  const metadataSchema: Metadata[] = [
+  const metadataSchema = [
     {
       name: "alliance",
       type: "string",
