@@ -40,7 +40,15 @@
     "update-asset-metadata": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/assets/update-asset-metadata.ts",
     "get-erc20-balance": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/user/erc20-balance.ts",
     "get-eth-balance": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/user/eth-balance.ts",
-    "get-user-info": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/user/get-user-info.ts"
+    "get-user-info": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/user/get-user-info.ts",
+    "transfer-erc20": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/transfer-erc20.ts",
+    "transfer-nft": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/transfer-nft.ts",
+    "burn-nft": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/burn-nft.ts",
+    "swap-assets": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/swap-assets.ts",
+    "get-transaction-details": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/get-transaction-details.ts",
+    "get-transactions-by-partner-ref-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/get-transactions-by-partner-ref-id.ts",
+    "get-transactions-by-group-req-id-and-partner-ref-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/get-transactions-by-group-req-id-and-partner-ref-id.ts",
+    "execute-bundle-transactions": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/bundle-transactions.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
