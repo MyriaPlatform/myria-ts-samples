@@ -48,19 +48,23 @@
     "get-transaction-details": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/get-transaction-details.ts",
     "get-transactions-by-partner-ref-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/get-transactions-by-partner-ref-id.ts",
     "get-transactions-by-group-req-id-and-partner-ref-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/get-transactions-by-group-req-id-and-partner-ref-id.ts",
-    "execute-bundle-transactions": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/bundle-transactions.ts"
+    "execute-bundle-transactions": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/transactions/bundle-transactions.ts",
+    "get-stark-key-from-wallet-signature": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/signatures/get-stark-key-from-wallet-signature.ts",
+    "get-stark-signature-with-msg-hash": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/signatures/get-stark-signature-with-msg-hash.ts",
+    "get-private-stark-key-from-wallet-signature": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/signatures/get-private-stark-key-from-wallet-signature.ts"
   },
   "devDependencies": {
     "@starkware-industries/starkware-crypto-utils": "^0.0.2",
     "@types/node": "^18.0.6",
     "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
-    "myria-core-sdk": "0.0.247-v30",
+    "myria-core-sdk": "0.0.247-v32",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "bn.js": "^5.2.1",
     "csv-parse": "^5.6.0",
     "ioredis": "^5.4.2",
     "uuidv4": "^6.2.13"
