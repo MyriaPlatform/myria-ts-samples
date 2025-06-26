@@ -8,6 +8,7 @@
     "generate-stark-key": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/common/stark-key.ts",
     "create-project": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/create-project.ts",
     "update-project": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/update-project.ts",
+    "delete-project-by-project-id": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/projects/delete-project-by-project-id.ts",
     "get-project-list": "ts-node -r tsconfig-paths/register ./src/projects/project-list.ts",
     "get-project-details": "ts-node -r tsconfig-paths/register ./src/projects/project-details.ts",
     "create-collection": "ts-node -r dotenv/config -r tsconfig-paths/register ./src/collections/create-collection.ts",
@@ -59,7 +60,7 @@
     "@types/node": "^18.0.6",
     "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
-    "myria-core-sdk": "0.0.247-v41",
+    "myria-core-sdk": "0.0.247-v42",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
