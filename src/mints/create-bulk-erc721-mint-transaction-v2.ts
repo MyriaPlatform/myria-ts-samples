@@ -11,7 +11,7 @@ import config from "../config";
   const env = config.environment;
   const mintingManager: MintingManager = new MintingManager(env);
 
-  const feePercentage = 2;
+  const feePercentage = 3;
   // const startTokenId = 31;
   // const endTokenId = 32;
 
@@ -21,8 +21,8 @@ import config from "../config";
   // After you done with the mint, can access to the developer portal page and access to assets page under 
   // specific collection for checking
   // There are no failed mint means all of yours NFTs/assets have been minted successfully
-  const startTokenId = 1;
-  const endTokenId = 10;
+  const startTokenId = 201;
+  const endTokenId = 215;
 
   const starkKey: string = config.stark_key;
   const contractAddress: string = config.collection_contract_address;
@@ -34,9 +34,8 @@ import config from "../config";
   console.log("Preparing assets to mint...");
   for (let i = startTokenId; i <= endTokenId; i++) {
     const asset: MintAssetErc721Info = {
-      uri: `${metadataApiUrl}/${i}`,
       tokenId: String(i),
-      description: 'mry asset',
+      description: 'mry asset for game',
     };
     assetsToMint.push(asset);
   }
