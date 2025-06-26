@@ -14,9 +14,9 @@ import config from "../config";
 
   const mintingManager: MintingManager = new MintingManager(EnvTypes.STAGING);
 
-  const feePercentage = 2;
-  const startTokenId = 264;
-  const endTokenId = 266;
+  const feePercentage = 3;
+  const startTokenId = 267;
+  const endTokenId = 280;
 
   const requestId: string = '28668645-0119-46d3-a9a0-20db4a1e09f7';
   const partnerRefId: string = String(config.project_id);      // Project Id
